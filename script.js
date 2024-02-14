@@ -85,8 +85,7 @@ function catchSweet() {
 }
 
 function addSweets() {
-  setTimeout(createSweet, 1000);
-  setTimeout(createSweet, 5000);
+  setTimeout(createSweet, 500);
 }
 
 function increaseScore() {
