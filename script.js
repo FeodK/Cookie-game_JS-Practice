@@ -36,9 +36,6 @@ function startGame() {
 
 function increaseTime() {
   timeEl.innerHTML = `Время: ${seconds}`;
-  if (seconds > 60) {
-    message.classList.add("visible");
-  }
   seconds++;
 }
 
@@ -85,10 +82,13 @@ function catchSweet() {
 }
 
 function addSweets() {
-  setTimeout(createSweet, 800);
+  setTimeout(createSweet, 1000);
 }
 
 function increaseScore() {
   score++;
+  if (score > 60) {
+    message.classList.add("visible");
+  }
   scoreEl.innerHTML = `Счет: ${score}`;
 }
